@@ -3,3 +3,23 @@
 #Implement all the code shown in the video.
 #Modify the code so the checks from 12 and under for the $8 price tag
 #and 62 and older for the $12 price tag.
+
+
+if customerAge <= 12:
+    price = 8  # Children 12 and under
+elif customerAge >= 62:
+    price = 12  # Seniors 62 and older
+else:
+    price = 9  # Standard price for others
+
+print(f"The cost for this customer is ${price}.")
+
+
+drinkYesNo = input("Add a drink? Y/N? ")
+
+if drinkYesNo == "Y":
+    smallLarge = input("Small or Large? S/L? ")
+    if smallLarge == "L":
+        price += 2
+    else:
+        price += 1
